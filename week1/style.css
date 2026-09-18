@@ -1,0 +1,871 @@
+```css
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    min-height: 78px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 7%;
+
+    border-bottom: 1px solid #e8ebf0;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e63946;
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+}
+
+.logo h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    color: #7a8291;
+}
+
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    font-size: 14px;
+    color: #555e6e;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e63946;
+}
+
+
+.profile-btn {
+    padding: 10px 17px;
+
+    background: #f3f5f8;
+
+    border-radius: 8px;
+
+    color: #303746;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 620px;
+
+    padding: 90px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff7f7,
+            #f7faff
+        );
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+
+    background: #ffe7e7;
+    color: #d62839;
+
+    padding: 7px 14px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e63946;
+}
+
+
+.hero p {
+    max-width: 570px;
+
+    color: #626b7b;
+
+    font-size: 16px;
+
+    margin-bottom: 32px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.sos-button {
+    padding: 15px 28px;
+
+    border-radius: 10px;
+
+    background: #e63946;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(230, 57, 70, 0.25);
+
+    transition: 0.3s;
+}
+
+.sos-button:hover {
+    transform: translateY(-3px);
+    background: #c92838;
+}
+
+
+.location-button {
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    border: 1px solid #dfe3ea;
+
+    color: #333b4b;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.location-button:hover {
+    border-color: #e63946;
+}
+
+
+/* =========================
+   EMERGENCY CARD
+========================= */
+
+.emergency-card {
+    width: 390px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 20px 60px rgba(35, 45, 65, 0.12);
+}
+
+
+.card-header {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 22px;
+}
+
+.card-header > span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f0;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+}
+
+.card-header h3 {
+    font-size: 17px;
+}
+
+.card-header p {
+    color: #88909e;
+    font-size: 11px;
+}
+
+
+.emergency-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.emergency-grid button {
+    background: #f8f9fb;
+
+    border: 1px solid #edf0f4;
+
+    padding: 18px 10px;
+
+    border-radius: 13px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    transition: 0.3s;
+}
+
+.emergency-grid button:hover {
+    transform: translateY(-3px);
+
+    border-color: #e63946;
+
+    background: #fff8f8;
+}
+
+.emergency-grid button span {
+    font-size: 27px;
+}
+
+.emergency-grid strong {
+    font-size: 12px;
+}
+
+.emergency-grid small {
+    color: #e63946;
+    font-weight: 700;
+}
+
+
+/* =========================
+   ALERT
+========================= */
+
+.alert-section {
+    width: 86%;
+    margin: -30px auto 70px;
+
+    background: #fff3d8;
+
+    border: 1px solid #ffe4a3;
+
+    border-radius: 15px;
+
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.alert-icon {
+    font-size: 28px;
+}
+
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content strong {
+    font-size: 14px;
+}
+
+.alert-content p {
+    font-size: 11px;
+    color: #77684b;
+}
+
+
+.view-alerts {
+    background: transparent;
+
+    font-weight: 600;
+
+    color: #9b6b00;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    width: 86%;
+
+    margin: 0 auto 100px;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title > span {
+    color: #e63946;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #77808e;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.service-card {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    border: 1px solid #edf0f4;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 45px rgba(30, 40, 60, 0.1);
+}
+
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+.red {
+    background: #ffe7e9;
+}
+
+.blue {
+    background: #e7f1ff;
+}
+
+.orange {
+    background: #fff0dd;
+}
+
+.green {
+    background: #e7f8ed;
+}
+
+.purple {
+    background: #f0e9ff;
+}
+
+.teal {
+    background: #e5f8f6;
+}
+
+
+.service-card h3 {
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+
+.service-card p {
+    font-size: 12px;
+
+    color: #737c8b;
+
+    margin-bottom: 18px;
+}
+
+
+.service-card a {
+    color: #e63946;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   EMERGENCY CTA
+========================= */
+
+.emergency-section {
+    width: 86%;
+
+    margin: 0 auto 100px;
+
+    min-height: 330px;
+
+    padding: 55px 70px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #a91422,
+            #e63946
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+
+.emergency-text {
+    max-width: 600px;
+}
+
+.emergency-text > span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.emergency-text h2 {
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin: 12px 0;
+}
+
+.emergency-text p {
+    opacity: 0.85;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+.large-sos {
+    padding: 14px 25px;
+
+    background: white;
+
+    color: #d62839;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.large-sos:hover {
+    transform: scale(1.04);
+}
+
+
+.safety-circle {
+    width: 190px;
+    height: 190px;
+
+    border: 2px solid rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.circle-inner {
+    font-size: 50px;
+}
+
+.safety-circle span {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.safety-circle small {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   SAFETY GUIDE
+========================= */
+
+.guide-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.guide-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    border: 1px solid #edf0f4;
+}
+
+
+.guide-card > span {
+    font-size: 35px;
+}
+
+
+.guide-card h3 {
+    margin: 12px 0 7px;
+
+    font-size: 16px;
+}
+
+
+.guide-card p {
+    font-size: 11px;
+
+    color: #737c8b;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #151b27;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+
+.footer-logo {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color: #9299a5;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    font-size: 11px;
+
+    color: #b5bbc5;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+.copyright {
+    padding-top: 20px;
+
+    border-top: 1px solid #2a313f;
+
+    color: #737b89;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 70px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .guide-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .emergency-section {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 12px 5%;
+    }
+
+    .profile-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .emergency-card {
+        width: 100%;
+    }
+
+    .alert-section {
+        width: 90%;
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .view-alerts {
+        margin-left: 43px;
+    }
+
+    .section {
+        width: 90%;
+    }
+
+    .service-grid,
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .emergency-section {
+        width: 90%;
+
+        padding: 40px 25px;
+    }
+
+    .emergency-text h2 {
+        font-size: 29px;
+    }
+
+    .safety-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+```

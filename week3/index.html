@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <div class="profile-card" id="profileCard">
+
+        <!-- Profile Image -->
+        <div class="profile-image">
+            <img src="" alt="Profile Image">
+        </div>
+
+        <!-- Profile Information -->
+        <div class="profile-info">
+
+            <h1>Nitin Yadav</h1>
+
+            <p class="profession">IT Student</p>
+
+            <div class="details">
+                <p>
+                    📍 <strong>Address:</strong>
+                    Kathmandu, Nepal
+                </p>
+
+                <p>
+                    📞 <strong>Phone:</strong>
+                    +977 9825442886
+                </p>
+
+                <p>
+                    ✉️ <strong>Email:</strong>
+                    ny36820@gmail.com
+                </p>
+
+                <p>
+                    🎓 <strong>Education:</strong>
+                    Bachelor's in Information Technology
+                </p>
+            </div>
+
+            <!-- QR Button -->
+            <button class="qr-button" onclick="openQR()">
+                Show QR Code
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- QR Code Popup -->
+    <div class="qr-modal" id="qrModal">
+
+        <div class="qr-box">
+
+            <button class="close-button" onclick="closeQR()">
+                &times;
+            </button>
+
+            <h2>My Profile QR</h2>
+
+            <div id="qrcode"></div>
+
+            <p>
+                Scan this QR code to view my profile.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sahayak Nepal - Emergency Response</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-icon">🛡️</div>
+
+            <div>
+                <h2>Sahayak Nepal</h2>
+                <span>Emergency Response</span>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#emergency">Emergency</a>
+            <a href="#services">Services</a>
+            <a href="#safety">Safety Guide</a>
+        </nav>
+
+        <button class="profile-btn">👤 Profile</button>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="badge">🇳🇵 Nepal Emergency Support</span>
+
+            <h1>
+                Stay Safe.<br>
+                <span>Stay Connected.</span>
+            </h1>
+
+            <p>
+                Sahayak Nepal helps you respond quickly during
+                earthquakes, floods, landslides, fires and other
+                emergencies.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="sos-button" onclick="sendSOS()">
+                    🆘 SEND SOS
+                </button>
+
+                <button class="location-button" onclick="shareLocation()">
+                    📍 Share Location
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Emergency Card -->
+        <div class="emergency-card">
+
+            <div class="card-header">
+                <span>🚨</span>
+
+                <div>
+                    <h3>Emergency Assistance</h3>
+                    <p>Get help immediately</p>
+                </div>
+            </div>
+
+            <div class="emergency-grid">
+
+                <button onclick="callEmergency('Police')">
+                    <span>👮</span>
+                    <strong>Police</strong>
+                    <small>100</small>
+                </button>
+
+                <button onclick="callEmergency('Fire')">
+                    <span>🚒</span>
+                    <strong>Fire</strong>
+                    <small>101</small>
+                </button>
+
+                <button onclick="callEmergency('Ambulance')">
+                    <span>🚑</span>
+                    <strong>Ambulance</strong>
+                    <small>102</small>
+                </button>
+
+                <button onclick="callEmergency('Tourist Police')">
+                    <span>🏔️</span>
+                    <strong>Tourist Police</strong>
+                    <small>1144</small>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ALERT SECTION ================= -->
+    <section class="alert-section">
+
+        <div class="alert-icon">⚠️</div>
+
+        <div class="alert-content">
+            <strong>Emergency Alert</strong>
+
+            <p>
+                Stay informed about disasters and emergencies
+                happening in your area.
+            </p>
+        </div>
+
+        <button class="view-alerts">
+            View Alerts →
+        </button>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
+
+        <div class="section-title">
+
+            <span>OUR SERVICES</span>
+
+            <h2>Emergency Services at Your Fingertips</h2>
+
+            <p>
+                Everything you need when you or someone around you
+                needs help.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon red">
+                    🆘
+                </div>
+
+                <h3>Emergency SOS</h3>
+
+                <p>
+                    Send an emergency alert with your current
+                    location to your trusted contacts.
+                </p>
+
+                <a href="#emergency">Learn More →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon blue">
+                    📍
+                </div>
+
+                <h3>Live Location</h3>
+
+                <p>
+                    Share your real-time GPS location with family,
+                    friends or emergency responders.
+                </p>
+
+                <a href="#">Share Location →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon orange">
+                    🚨
+                </div>
+
+                <h3>Disaster Alerts</h3>
+
+                <p>
+                    Receive important alerts about earthquakes,
+                    floods, landslides and fires.
+                </p>
+
+                <a href="#">View Alerts →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon green">
+                    🏥
+                </div>
+
+                <h3>Nearby Help</h3>
+
+                <p>
+                    Find nearby hospitals, police stations,
+                    fire stations and shelters.
+                </p>
+
+                <a href="#">Find Help →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon purple">
+                    📢
+                </div>
+
+                <h3>Report Emergency</h3>
+
+                <p>
+                    Report accidents, fires, floods and other
+                    emergencies with photos and location.
+                </p>
+
+                <a href="#">Report Now →</a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon teal">
+                    👨‍👩‍👧
+                </div>
+
+                <h3>Family Safety</h3>
+
+                <p>
+                    Connect your family members and quickly check
+                    whether everyone is safe.
+                </p>
+
+                <a href="#">Manage Family →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EMERGENCY SECTION ================= -->
+    <section class="emergency-section" id="emergency">
+
+        <div class="emergency-text">
+
+            <span>IN AN EMERGENCY?</span>
+
+            <h2>Get Help When Every Second Matters.</h2>
+
+            <p>
+                Press the SOS button to immediately send your
+                emergency location to your trusted contacts.
+            </p>
+
+            <button class="large-sos" onclick="sendSOS()">
+                🆘 SEND EMERGENCY SOS
+            </button>
+
+        </div>
+
+
+        <div class="safety-circle">
+
+            <div class="circle-inner">
+                🛡️
+            </div>
+
+            <span>24/7</span>
+            <small>Emergency Support</small>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SAFETY GUIDE ================= -->
+    <section class="section safety" id="safety">
+
+        <div class="section-title">
+
+            <span>SAFETY GUIDE</span>
+
+            <h2>Know What To Do During a Disaster</h2>
+
+        </div>
+
+
+        <div class="guide-grid">
+
+            <div class="guide-card">
+                <span>🏚️</span>
+                <h3>Earthquake</h3>
+                <p>
+                    Drop, cover and hold on. Stay away from
+                    windows and heavy objects.
+                </p>
+            </div>
+
+
+            <div class="guide-card">
+                <span>🌊</span>
+                <h3>Flood</h3>
+                <p>
+                    Move to higher ground and avoid walking or
+                    driving through flood water.
+                </p>
+            </div>
+
+
+            <div class="guide-card">
+                <span>⛰️</span>
+                <h3>Landslide</h3>
+                <p>
+                    Move away from unstable slopes and follow
+                    official evacuation instructions.
+                </p>
+            </div>
+
+
+            <div class="guide-card">
+                <span>🔥</span>
+                <h3>Fire</h3>
+                <p>
+                    Leave the building immediately and call
+                    emergency services.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-logo">
+            🛡️ <strong>Sahayak Nepal</strong>
+        </div>
+
+        <p>
+            A smart emergency and disaster response platform
+            for Nepal.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 Sahayak Nepal. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        function sendSOS() {
+
+            const confirmed =
+                confirm(
+                    "Are you sure you want to send an emergency SOS?"
+                );
+
+            if (confirmed) {
+
+                alert(
+                    "🚨 SOS SENT!\n\n" +
+                    "Your emergency location has been shared with your trusted contacts."
+                );
+
+            }
+
+        }
+
+
+        function shareLocation() {
+
+            if (navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(
+
+                    function(position) {
+
+                        const latitude =
+                            position.coords.latitude;
+
+                        const longitude =
+                            position.coords.longitude;
+
+                        alert(
+                            "📍 Your location:\n\n" +
+                            "Latitude: " + latitude +
+                            "\nLongitude: " + longitude
+                        );
+
+                    },
+
+                    function() {
+
+                        alert(
+                            "Unable to access your location."
+                        );
+
+                    }
+
+                );
+
+            } else {
+
+                alert(
+                    "Geolocation is not supported by your browser."
+                );
+
+            }
+
+        }
+
+
+        function callEmergency(service) {
+
+            alert(
+                "Calling " + service + " emergency service..."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
